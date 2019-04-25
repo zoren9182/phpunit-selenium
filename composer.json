@@ -1,5 +1,5 @@
 {
-    "name": "phpunit/phpunit-selenium",
+    "name": "zoren9182/phpunit-selenium",
     "description": "Selenium Server integration for PHPUnit",
     "type": "library",
     "keywords": [

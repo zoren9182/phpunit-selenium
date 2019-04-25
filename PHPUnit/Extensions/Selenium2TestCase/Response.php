@@ -84,7 +84,12 @@ class PHPUnit_Extensions_Selenium2TestCase_Response
     public function getURL()
     {
         $url = $this->info['url'];
-        $sessionId = $this->jsonResponse['sessionId'];
+        if(isset($this->jsonResponse['sessionId'])){
+            $sessionId = $this->jsonResponse['sessionId'];
+        }elseif(isset($this->jsonResponse["value"]['sessionId'])){
+            $sessionId = $this->jsonResponse["value"]['sessionId'];
+        }
+        
 
         // if url doesn't have sessionId included - append it manually
         // this change was performed in selenium v2.34
